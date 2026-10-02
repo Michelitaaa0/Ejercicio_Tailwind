@@ -149,3 +149,5 @@ Si terminéis antes, probad alguno de estos:
 - [Paleta de colores](https://tailwindcss.com/docs/colors)
 
 **Truco:** si sabéis qué propiedad de CSS queréis (por ejemplo `justify-content: space-between`), buscad esa propiedad en la documentación y os dirá qué clase de Tailwind la genera (`justify-between`).
+
+https://tailwindcss.com/ invetigar que esta todo lo de tailwind que usaremos en clase
