@@ -35,7 +35,7 @@
     <!-- Tailwind CSS v4 desde el Play CDN (no hace falta instalar nada) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="text-blue-600"></body>">
+<body class="text-blue-600">
 
     <!-- =================================================================
          1. CABECERA
@@ -51,13 +51,13 @@
          Docs: https://tailwindcss.com/docs/flex-direction
                https://tailwindcss.com/docs/justify-content
          ================================================================= -->
-    <header class="">
-        <nav class="">
-            <a href="#" class="">La Aguja y el Tornillo</a>
-            <ul class="">
-                <li><a href="#productos" class="">Productos</a></li>
-                <li><a href="#horario" class="">Horario</a></li>
-                <li><a href="#contacto" class="">Contacto</a></li>
+    <header class="bg-green-900 text-amber-100">
+        <nav class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+            <a href="#" class="font-bold text-xl">La Aguja y el Tornillo</a>
+            <ul class=" flex flex-col md:flex-row items-center gap-2 md:gap-6 font-serif uppercase tracking-widest">
+                <li><a href="#productos" class="hover:text-amber-300">Productos</a></li>
+                <li><a href="#horario" class="hover:text-amber-300">Horario</a></li>
+                <li><a href="#contacto" class="hover:text-amber-300">Contacto</a></li>
             </ul>
         </nav>
     </header>
