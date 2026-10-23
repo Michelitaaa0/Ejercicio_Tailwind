@@ -31,11 +31,20 @@
           (usad el buscador de arriba, Ctrl + K)
     =====================================================================
     -->
+<!--Nuestro CSS-->
+<link rel="stylrsheet" href="css/style.css">
+
 
     <!-- Tailwind CSS v4 desde el Play CDN (no hace falta instalar nada) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="text-blue-600">
+     <!--Para añadir nuestras propias variables, tenemos que modificar el "tema" -->
+     <!-- <style type="text/tailwindcss">
+ @theme static {
+    -- color-mostaza: #00ff43;
+        }
+     </style> -->
+     </head>
+<body class="bg-stone-100 text-stone-800">
 
     <!-- =================================================================
          1. CABECERA
@@ -51,10 +60,10 @@
          Docs: https://tailwindcss.com/docs/flex-direction
                https://tailwindcss.com/docs/justify-content
          ================================================================= -->
-    <header class="bg-green-900">
-        <nav class="flex flex-col items-center justify-between md:flex-row md:justify-between">
-            <a href="#" class="font-bold text-xl">La Aguja y el Tornillo</a>
-            <ul class=" flex flex-col md:flex-row items-center gap-2 md:gap-6 font-sans-serif uppercase tracking-widest">
+    <header class="bg-green-900 text-amber-50">
+        <nav class="max-w-5xl mx-auto flex flex-col items-center justify-between md:flex-row md:justify-between px-6 py-4 gap-4 tracking-widest gap-4">
+            <a href="#" class="font-serif text-2xl">La Aguja y el Tornillo</a>
+            <ul class="flex flex-row justify-between gap-4 uppercase font-bold tracking-widest">
                 <li><a href="#productos" class="hover:text-amber-300">Productos</a></li>
                 <li><a href="#horario" class="hover:text-amber-300">Horario</a></li>
                 <li><a href="#contacto" class="hover:text-amber-300">Contacto</a></li>
@@ -78,16 +87,16 @@
                    https://tailwindcss.com/docs/border-radius
              ============================================================= -->
         <section class="bg-amber-100 border-b-4 border-green-900">
-    <div class="max-w-5xl mx-auto px-6 py-20 text-center">
-        <p class="text-red-700 text-sm font-bold uppercase tracking-wide">Desde 1962 en el barrio</p>
-        <h1 class="mt-2 font-serif text-4xl md:text-6xl font-bold text-green-900">Si no lo tenemos, se lo pedimos</h1>
-        <p class="max-w-2xl mx-auto mt-6 text-lg text-stone-900">
-            Tornillos sueltos, botones de repuesto, cremalleras, bombillas y copias de llaves.
-            Lo de toda la vida, con la atención de siempre.
-        </p>
-        <a href="#horario" class="inline-block mt-8 px-6 py-3 rounded-full bg-red-700 hover:bg-red-800 text-white font-bold">Ver horario</a>
-    </div>
-</section>
+            <div class="max-w-5xl mx-auto text-center py-20 px-6">
+                <p class="text-red-700 uppercase font-bold text-sm">Desde 1962 en el barrio</p>
+                <h1 class="text-green-900 text-4xl md:text-6xl mt-3 font-serif font-bold">Si no lo tenemos, se lo pedimos</h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-stone-600">
+                    Tornillos sueltos, botones de repuesto, cremalleras, bombillas y copias de llaves.
+                    Lo de toda la vida, con la atención de siempre.
+                </p>
+                <a href="#horario" class="inline-block mt-8 px-6 py-3 bg-red-700 text-amber-50 rounded-full font-bold hover:bg-red-900">Ver horario</a>
+            </div>
+        </section>
 
         <!-- =============================================================
              3. PRODUCTOS (TARJETAS)
@@ -104,34 +113,34 @@
              Docs: https://tailwindcss.com/docs/grid-template-columns
                    https://tailwindcss.com/docs/box-shadow
              ============================================================= -->
-        <section id="productos" class="">
-            <h2 class="">Qué encontrará en la tienda</h2>
+        <section id="productos" class="max-w-5xl mx-auto py-20 px-6">
+            <h2 class="font-serif text-3xl font-bold text-green-900 text-center mb-10">Qué encontrará en la tienda</h2>
 
-            <div class="">
-                <article class="">
-                    <h3 class="">Ferretería</h3>
-                    <p class="">Todo para los arreglos de casa, también por unidades.</p>
-                    <ul class="">
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-white p-6 rounded-xl shadow-md border-t-8 border-green-900 transition hover:-translate-y-1 hover:shadow-xl">
+                    <h3 class="font-serif font-bold">Ferretería</h3>
+                    <p class="text-stone-600 mt-2">Todo para los arreglos de casa, también por unidades.</p>
+                    <ul class="mt-2">
                         <li>Tornillos, tuercas y tacos</li>
                         <li>Herramienta de mano</li>
                         <li>Bombillas y enchufes</li>
                     </ul>
                 </article>
 
-                <article class="">
-                    <h3 class="">Mercería</h3>
-                    <p class="">Para coser, remendar y dar una segunda vida a la ropa.</p>
-                    <ul class="">
+                <article class="bg-white p-6 rounded-xl shadow-md border-t-8 border-red-700 transition hover:-translate-y-1 hover:shadow-xl">
+                    <h3 class="font-serif font-bold">Mercería</h3>
+                    <p class="text-stone-600 mt-2">Para coser, remendar y dar una segunda vida a la ropa.</p>
+                    <ul class="mt-2">
                         <li>Botones de todos los tamaños</li>
                         <li>Hilos, agujas y dedales</li>
                         <li>Cremalleras y gomas</li>
                     </ul>
                 </article>
 
-                <article class="">
-                    <h3 class="">Servicios</h3>
-                    <p class="">Lo hacemos en el momento, mientras espera.</p>
-                    <ul class="">
+                <article class="bg-white p-6 rounded-xl shadow-md border-t-8 border-amber-500 transition hover:-translate-y-1 hover:shadow-xl">
+                    <h3 class="font-serif font-bold">Servicios</h3>
+                    <p class="text-stone-600 mt-2">Lo hacemos en el momento, mientras espera.</p>
+                    <ul class="mt-2">
                         <li>Copia de llaves</li>
                         <li>Afilado de tijeras y cuchillos</li>
                         <li>Pedidos por encargo</li>

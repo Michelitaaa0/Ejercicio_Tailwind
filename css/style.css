@@ -1,0 +1,26 @@
+/*Sistema cascada CSS*/
+/*ID >> CLASS >> TAG >> **/
+
+/* id >> Clase >> etiquetas >> selector universal */
+
+@layer theme, base, components, utilities;
+
+/* Estilos de etiqueta, en "base" */
+
+@layer base {
+    h1 {
+    color: red;
+    }
+}
+
+/* Estilos de clase o clases propias, en "components" */
+
+@layer components {
+    .botoncito {
+        padding: 0.5rem 0.8rem;
+        border-radius: 50%;
+        background-color: yellowgreen;
+        color: aliceblue;
+        font-weight: bold;
+    }
+}
